@@ -1,0 +1,23 @@
+{
+  "name": "flickr-backend-example",
+  "version": "1.0.0",
+  "description": "An API in NodeJS/Express for serving Flick images",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronplanell/flickr-backend-example.git"
+  },
+  "author": "Aaron Planell López",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/aaronplanell/flickr-backend-example/issues"
+  },
+  "homepage": "https://github.com/aaronplanell/flickr-backend-example#readme",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "express": "^4.15.2"
+  }
+}
