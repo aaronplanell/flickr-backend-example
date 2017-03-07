@@ -1,27 +1,20 @@
-var express = require("express");
-var axios = require("axios");
+import express from 'express';
+import axios from 'axios';
 
-var url = 'https://api.flickr.com/services/rest/';
-var app = express();
+//Constants
+import { FLICK_API_URL, FLICK_API_KEY, FLICK_USER_ID, DEFAULT_FORMAT, DEFAULT_PARAMS } from './constants';
 
-app.get('/photos', function (req, res) {
-  axios.get(url, {
-    params: {
-      method: 'flickr.photos.search',
-      api_key: 'f98e7df44e1bca9174cba30db812cd3a',
-      user_id: '148575064@N08',
-      format: 'json'
-    }
-  })
-  .then(function (response) {
-    res.send(response.data);
-  })
-  .catch(function (error) {
-    res.send(error);
-  });
-});
+//Auxiliar functions
+import { generateApiFlickCall } from './functions';
 
+//The app
+let app = express();
+
+//Set the configuration
+app.get('/photos', generateApiFlickCall('flickr.photos.search', {user_id: FLICK_USER_ID}));
+
+//Do the listening
 app.listen(3000, function () {
   console.log('Listening on port 3000!');
-  console.log('Access to: http://localhost:3000/photos');
+  console.log('Open http://localhost:3000/photos');
 });
