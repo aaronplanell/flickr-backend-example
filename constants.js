@@ -1,8 +1,9 @@
-export const FLICK_API_URL = 'https://api.flickr.com/services/rest/';
-export const FLICK_API_KEY = 'f98e7df44e1bca9174cba30db812cd3a';
-export const FLICK_USER_ID = '148575064@N08';
+export const APPLICATION_PORT = 3000;
+export const FLICKR_API_URL = 'https://api.flickr.com/services/rest/';
+export const FLICKR_CONSUMER_KEY = 'b7718b2dc66dee760a0f66c56f507434';
+export const FLICKR_CONSUMER_SECRET = '44df92eb9aabb142';
 export const DEFAULT_FORMAT = 'json';
 export const DEFAULT_PARAMS = {
-  api_key: FLICK_API_KEY,
+  api_key: FLICKR_CONSUMER_KEY,
   format: DEFAULT_FORMAT
 };

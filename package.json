@@ -18,7 +18,9 @@
   "homepage": "https://github.com/aaronplanell/flickr-backend-example#readme",
   "dependencies": {
     "axios": "^0.15.3",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "express-session": "^1.15.1",
+    "grant-express": "^3.7.1"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",

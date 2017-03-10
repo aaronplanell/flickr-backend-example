@@ -1,11 +1,12 @@
 import axios from 'axios';
 
 //Constants
-import { FLICK_API_URL, DEFAULT_PARAMS } from './constants';
+import { FLICKR_API_URL, DEFAULT_PARAMS } from './constants';
 
+//Call to
 export const generateApiFlickCall = (method, params) => {
   return (req, res) => {
-    axios.get(FLICK_API_URL, {
+    axios.get(FLICKR_API_URL, {
       params: {
         ...DEFAULT_PARAMS,
         method,
