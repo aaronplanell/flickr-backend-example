@@ -1,6 +1,6 @@
-var express = require('express');
-var session = require('express-session');
-var grant = require('grant-express');
+import express from 'express';
+import session from 'express-session';
+import grant from 'grant-express';
 
 //Constants
 import { APPLICATION_PORT, FLICKR_CONSUMER_SECRET } from './constants';

@@ -1,27 +1,29 @@
-var request = require('request')
-var promise = require('bluebird')
+import promise from 'bluebird';
+import request from '@request/client';
 var purest = require('purest')({request, promise})
-var config = require('@purest/providers')
+
+//Constants
+import { FLICKR_CONSUMER_KEY, FLICKR_CONSUMER_SECRET } from './constants';
 
 export const testLoginWithPurest = (connectionData) => {
-  console.log('Inside testLoginWithPurest');
-
-  var flickr = purest({provider: 'flickr', config,
-    auth: {
-      token: connectionData.oauth_token,
-      secret: connectionData.oauth_token_secret
-    }
-  });
+  var flickr = purest({
+    provider: 'flickr',
+    config: require('@purest/providers'),
+    key: FLICKR_CONSUMER_KEY,
+    secret: FLICKR_CONSUMER_SECRET
+  })
 
   flickr
-    .get('flickr.test.login')
-    .qs({api_key: connectionData.oauth_consumer_key})
-    .auth(connectionData.access_token, connectionData.access_secret)
-    .request(function (err, res, body) {
-      console.log('err: ', err);
-      console.log('res: ', res);
-      console.log('body: ', body);
+    .get()
+    .qs({
+      method: 'flickr.test.login',
+      api_key: FLICKR_CONSUMER_KEY
     })
-
-  console.log('Outside testLoginWithPurest');
+    .auth(connectionData.access_token, connectionData.access_secret)
+    .request()
+    .then(([res, body]) => {
+      console.log(body);
+      return body;
+    })
+    .catch((err) => console.log(err))
 }
