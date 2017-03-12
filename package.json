@@ -17,10 +17,15 @@
   },
   "homepage": "https://github.com/aaronplanell/flickr-backend-example#readme",
   "dependencies": {
+    "@purest/providers": "^1.0.0",
     "axios": "^0.15.3",
+    "bluebird": "^3.5.0",
+    "crypto": "^0.0.3",
     "express": "^4.15.2",
     "express-session": "^1.15.1",
-    "grant-express": "^3.7.1"
+    "grant-express": "^3.7.1",
+    "purest": "^3.0.1",
+    "restler": "^3.4.0"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",

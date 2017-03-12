@@ -10,6 +10,7 @@ import { config } from './config';
 
 //Auxiliar functions
 import { getConnectionData, generateApiFlickCallWithoutAuthentication } from './functions';
+import { testLoginWithPurest } from './purest';
 
 //App Express
 var app = express();
@@ -36,6 +37,9 @@ app.get('/', function (req, res) {
       //Configure the call for those methods that don't need authentication
       app.get('/photos', generateApiFlickCallWithoutAuthentication('flickr.photos.search', {user_id: '148575064@N08'}));
       app.get('/collections', generateApiFlickCallWithoutAuthentication('flickr.collections.getTree', {user_id: '148575064@N08'}));
+
+      //testLogin
+      testLoginWithPurest(connectionData);
 
       //Configure the call for thos methods that NEED authentication
       res.end('Well... You\'re connected. You can work with the API :D');
