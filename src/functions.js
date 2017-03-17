@@ -2,31 +2,15 @@ import promise from 'bluebird';
 import axios from 'axios';
 import request from '@request/client';
 
-const purest = require('purest')({request, promise})
-
 //Constants
 import { FLICKR_API_URL, DEFAULT_PARAMS, FLICKR_CONSUMER_KEY, FLICKR_CONSUMER_SECRET } from './constants';
-
-/*
- * Call to Flickr without authentication
- ***/
-export const doCallWithoutAuthentication = (method, params) => {
-  return (req, res) => {
-    axios.get(FLICKR_API_URL, {
-      params: {
-        ...DEFAULT_PARAMS,
-        method,
-        ...params
-      }
-    })
-    .then(function (response) {
-      res.send(response.data);
-    })
-    .catch(function (error) {
-      res.send(error);
-    });
-  }
-};
+const purest = require('purest')({request, promise});
+const flickr = purest({
+  provider: 'flickr',
+  config: require('@purest/providers'),
+  key: FLICKR_CONSUMER_KEY,
+  secret: FLICKR_CONSUMER_SECRET
+});
 
 /*
  * Construct an object with all the data of the connection
@@ -67,13 +51,6 @@ const showConnectionData = (connectionData) => {
  * Test login
  ***/
 export const testLogin = async (connectionData) => {
-  var flickr = purest({
-    provider: 'flickr',
-    config: require('@purest/providers'),
-    key: FLICKR_CONSUMER_KEY,
-    secret: FLICKR_CONSUMER_SECRET
-  })
-
   return await flickr
     .get()
     .qs({
@@ -89,4 +66,29 @@ export const testLogin = async (connectionData) => {
       console.log(err);
       return err;
     })
+}
+
+/*
+ * Generic call
+ ***/
+export const doCall = (connectionData, method, otherParams) => {
+  return (req, res) => {
+    flickr
+      .get()
+      .qs({
+        method,
+        api_key: FLICKR_CONSUMER_KEY,
+        ...otherParams
+      })
+      .auth(connectionData.access_token, connectionData.access_secret)
+      .request()
+      .then(([responseOfFlickr, body]) => {
+        res.send(body);
+        return body;
+      })
+      .catch((err) => {
+        console.log(err);
+        res.send(error);
+      })
+    }
 }

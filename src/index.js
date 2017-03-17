@@ -9,7 +9,7 @@ import { APPLICATION_PORT, FLICKR_CONSUMER_SECRET } from './constants';
 import { config } from './config';
 
 //Auxiliar functions
-import { doCallWithoutAuthentication, getConnectionData, testLogin } from './functions';
+import { getConnectionData, testLogin, doCall } from './functions';
 
 //App Express
 var app = express();
@@ -28,10 +28,6 @@ app.get('/', function (req, res) {
   }
   else {
 
-    //Configure the call for those methods that don't need authentication
-    app.get('/photos', doCallWithoutAuthentication('flickr.photos.search', {user_id: '148575064@N08'}));
-    app.get('/collections', doCallWithoutAuthentication('flickr.collections.getTree', {user_id: '148575064@N08'}));
-
     //OK. If we are here we are logged :D
     const connectionData = getConnectionData(req);
     if (connectionData) {
@@ -40,11 +36,12 @@ app.get('/', function (req, res) {
       testLogin(connectionData).then( (result) => {
         const { stat } = result;
         if (stat === 'ok') {
-          res.end('Well... You\'re connected. You can work with the API :D');
 
           //Configure the call for those methods that need authentication
-          //TODO
+          app.get('/photos', doCall(connectionData, 'flickr.photos.search', {user_id: '148575064@N08'}));
+          app.get('/collections', doCall(connectionData, 'flickr.collections.getTree', {user_id: '148575064@N08'}));
 
+          res.end('Well... You\'re connected. You can work with the API :D');
         } else {
           res.end('Ooops! Something wrong has happened :/');
         }
