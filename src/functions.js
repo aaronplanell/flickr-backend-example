@@ -71,14 +71,14 @@ export const testLogin = async (connectionData) => {
 /*
  * Generic call
  ***/
-export const doCall = (connectionData, method, otherParams) => {
+export const doCall = (connectionData, method) => {
   return (req, res) => {
     flickr
       .get()
       .qs({
         method,
         api_key: FLICKR_CONSUMER_KEY,
-        ...otherParams
+        ...req.query
       })
       .auth(connectionData.access_token, connectionData.access_secret)
       .request()

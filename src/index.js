@@ -38,8 +38,8 @@ app.get('/', function (req, res) {
         if (stat === 'ok') {
 
           //Configure the call for those methods that need authentication
-          app.get('/photos', doCall(connectionData, 'flickr.photos.search', {user_id: '148575064@N08'}));
-          app.get('/collections', doCall(connectionData, 'flickr.collections.getTree', {user_id: '148575064@N08'}));
+          app.get('/photos', doCall(connectionData, 'flickr.photos.search'));
+          app.get('/collections', doCall(connectionData, 'flickr.collections.getTree'));
 
           res.end('Well... You\'re connected. You can work with the API :D');
         } else {
