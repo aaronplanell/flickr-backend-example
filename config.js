@@ -17,6 +17,6 @@ export const config = {
     custom_parameters: ['perms'],
     consumer_key: FLICKR_CONSUMER_KEY,
     consumer_secret: FLICKR_CONSUMER_SECRET,
-    scope: ['write']
+    scope: ['read']
   }
 };

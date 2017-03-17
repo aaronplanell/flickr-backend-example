@@ -1,10 +1,16 @@
+import promise from 'bluebird';
 import axios from 'axios';
+import request from '@request/client';
+
+const purest = require('purest')({request, promise})
 
 //Constants
-import { FLICKR_CONSUMER_KEY, FLICKR_API_URL, DEFAULT_PARAMS } from './constants';
+import { FLICKR_API_URL, DEFAULT_PARAMS, FLICKR_CONSUMER_KEY, FLICKR_CONSUMER_SECRET } from './constants';
 
-//Call to Flickr without authentication
-export const generateApiFlickCallWithoutAuthentication = (method, params) => {
+/*
+ * Call to Flickr without authentication
+ ***/
+export const doCallWithoutAuthentication = (method, params) => {
   return (req, res) => {
     axios.get(FLICKR_API_URL, {
       params: {
@@ -22,7 +28,9 @@ export const generateApiFlickCallWithoutAuthentication = (method, params) => {
   }
 };
 
-//Construct an object with all the data of the connection
+/*
+ * Construct an object with all the data of the connection
+ ***/
 export const getConnectionData = (req) => {
   if (req && req.session && req.session.grant && req.session.grant.step1 && req.session.grant.response) {
     const oauth_consumer_key = FLICKR_CONSUMER_KEY;
@@ -53,4 +61,32 @@ const showConnectionData = (connectionData) => {
   console.log(' - access_token_________: ', access_token);
   console.log(' - access_secret________: ', access_secret);
   console.log('-----------------------------------------------------------');
+}
+
+/*
+ * Test login
+ ***/
+export const testLogin = async (connectionData) => {
+  var flickr = purest({
+    provider: 'flickr',
+    config: require('@purest/providers'),
+    key: FLICKR_CONSUMER_KEY,
+    secret: FLICKR_CONSUMER_SECRET
+  })
+
+  return await flickr
+    .get()
+    .qs({
+      method: 'flickr.test.login',
+      api_key: FLICKR_CONSUMER_KEY
+    })
+    .auth(connectionData.access_token, connectionData.access_secret)
+    .request()
+    .then(([res, body]) => {
+      return body;
+    })
+    .catch((err) => {
+      console.log(err);
+      return err;
+    })
 }
