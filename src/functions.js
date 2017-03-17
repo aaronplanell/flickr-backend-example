@@ -48,13 +48,34 @@ const showConnectionData = (connectionData) => {
 }
 
 /*
- * Test login
+ * Do login
  ***/
-export const testLogin = async (connectionData) => {
+export const doLogin = async (connectionData) => {
   return await flickr
     .get()
     .qs({
       method: 'flickr.test.login',
+      api_key: FLICKR_CONSUMER_KEY
+    })
+    .auth(connectionData.access_token, connectionData.access_secret)
+    .request()
+    .then(([res, body]) => {
+      return body;
+    })
+    .catch((err) => {
+      console.log(err);
+      return err;
+    })
+}
+
+/*
+ * Get methods
+ ***/
+export const getMethods = async (connectionData) => {
+  return await flickr
+    .get()
+    .qs({
+      method: 'flickr.reflection.getMethods',
       api_key: FLICKR_CONSUMER_KEY
     })
     .auth(connectionData.access_token, connectionData.access_secret)
