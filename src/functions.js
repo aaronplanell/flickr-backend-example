@@ -1,5 +1,4 @@
 import promise from 'bluebird';
-import axios from 'axios';
 import request from '@request/client';
 
 //Constants
@@ -48,9 +47,9 @@ const showConnectionData = (connectionData) => {
 }
 
 /*
- * Do login
+ * Test login
  ***/
-export const doLogin = async (connectionData) => {
+export const testLogin = async (connectionData) => {
   return await flickr
     .get()
     .qs({
@@ -69,7 +68,7 @@ export const doLogin = async (connectionData) => {
 }
 
 /*
- * Get methods
+ * Get list of methods
  ***/
 export const getMethods = async (connectionData) => {
   return await flickr
@@ -77,6 +76,28 @@ export const getMethods = async (connectionData) => {
     .qs({
       method: 'flickr.reflection.getMethods',
       api_key: FLICKR_CONSUMER_KEY
+    })
+    .auth(connectionData.access_token, connectionData.access_secret)
+    .request()
+    .then(([res, body]) => {
+      return body;
+    })
+    .catch((err) => {
+      console.log(err);
+      return err;
+    })
+}
+
+/*
+ * Get method info
+ ***/
+export const getMethodInfo = async (connectionData, methodName) => {
+  return await flickr
+    .get()
+    .qs({
+      method: 'flickr.reflection.getMethodInfo',
+      api_key: FLICKR_CONSUMER_KEY,
+      method_name: methodName
     })
     .auth(connectionData.access_token, connectionData.access_secret)
     .request()
