@@ -1,14 +1,14 @@
 import promise from 'bluebird';
 import request from '@request/client';
 
-//Constants
+// Constants
 import { FLICKR_API_URL, DEFAULT_PARAMS, FLICKR_CONSUMER_KEY, FLICKR_CONSUMER_SECRET } from './constants';
 const purest = require('purest')({request, promise});
 const flickr = purest({
-  provider: 'flickr',
-  config: require('@purest/providers'),
-  key: FLICKR_CONSUMER_KEY,
-  secret: FLICKR_CONSUMER_SECRET
+  'provider': 'flickr',
+  'config': require('@purest/providers'),
+  'key': FLICKR_CONSUMER_KEY,
+  'secret': FLICKR_CONSUMER_SECRET
 });
 
 /*
@@ -26,7 +26,7 @@ export const getConnectionData = (req) => {
   } else {
     return null;
   }
-}
+};
 
 /*
  * Show data for debugging purposes
@@ -44,7 +44,7 @@ const showConnectionData = (connectionData) => {
   console.log(' - access_token_________: ', access_token);
   console.log(' - access_secret________: ', access_secret);
   console.log('-----------------------------------------------------------');
-}
+};
 
 /*
  * Test login
@@ -53,8 +53,8 @@ export const testLogin = async (connectionData) => {
   return await flickr
     .get()
     .qs({
-      method: 'flickr.test.login',
-      api_key: FLICKR_CONSUMER_KEY
+      'method': 'flickr.test.login',
+      'api_key': FLICKR_CONSUMER_KEY
     })
     .auth(connectionData.access_token, connectionData.access_secret)
     .request()
@@ -64,8 +64,8 @@ export const testLogin = async (connectionData) => {
     .catch((err) => {
       console.log(err);
       return err;
-    })
-}
+    });
+};
 
 /*
  * Get list of methods
@@ -74,8 +74,8 @@ export const getMethods = async (connectionData) => {
   return await flickr
     .get()
     .qs({
-      method: 'flickr.reflection.getMethods',
-      api_key: FLICKR_CONSUMER_KEY
+      'method': 'flickr.reflection.getMethods',
+      'api_key': FLICKR_CONSUMER_KEY
     })
     .auth(connectionData.access_token, connectionData.access_secret)
     .request()
@@ -85,8 +85,8 @@ export const getMethods = async (connectionData) => {
     .catch((err) => {
       console.log(err);
       return err;
-    })
-}
+    });
+};
 
 /*
  * Get method info
@@ -95,9 +95,9 @@ export const getMethodInfo = async (connectionData, methodName) => {
   return await flickr
     .get()
     .qs({
-      method: 'flickr.reflection.getMethodInfo',
-      api_key: FLICKR_CONSUMER_KEY,
-      method_name: methodName
+      'method': 'flickr.reflection.getMethodInfo',
+      'api_key': FLICKR_CONSUMER_KEY,
+      'method_name': methodName
     })
     .auth(connectionData.access_token, connectionData.access_secret)
     .request()
@@ -107,8 +107,8 @@ export const getMethodInfo = async (connectionData, methodName) => {
     .catch((err) => {
       console.log(err);
       return err;
-    })
-}
+    });
+};
 
 /*
  * Generic call
@@ -119,7 +119,7 @@ export const doCall = (connectionData, method) => {
       .get()
       .qs({
         method,
-        api_key: FLICKR_CONSUMER_KEY,
+        'api_key': FLICKR_CONSUMER_KEY,
         ...req.query
       })
       .auth(connectionData.access_token, connectionData.access_secret)
@@ -131,6 +131,6 @@ export const doCall = (connectionData, method) => {
       .catch((err) => {
         console.log(err);
         res.send(error);
-      })
-    }
-}
+      });
+    };
+};

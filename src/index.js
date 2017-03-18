@@ -1,34 +1,33 @@
 import express from 'express';
 import session from 'express-session';
-import grant from 'grant-express';
+import Grant from 'grant-express';
 
-//Constants
+// Constants
 import { APPLICATION_PORT, FLICKR_CONSUMER_SECRET } from './constants';
 
-//Configuration
+// Configuration
 import { config } from './config';
 
-//Auxiliar functions
+// Auxiliar functions
 import { getConnectionData, testLogin, getMethods, getMethodInfo, doCall } from './functions';
 
-//App Express
-var app = express();
-app.use(session({secret: FLICKR_CONSUMER_SECRET}));
-app.use(new grant(config));
+// App Express
+let app = express();
+app.use(session({'secret': FLICKR_CONSUMER_SECRET}));
+app.use(new Grant(config));
 
-//Our session variable
+// Our session variable
 let currentSession;
 
-//The main page
-app.get('/', function (req, res) {
+// The main page
+app.get('/', (req, res) => {
 
-  //If there are no session, must connect
+  // If there are no session, must connect
   if (!currentSession) {
     res.redirect('/connect/flickr');
-  }
-  else {
+  } else {
 
-    //OK. If we are here we are logged :D
+    // OK. If we are here we are logged :D
     const connectionData = getConnectionData(req);
     if (connectionData) {
 
@@ -52,7 +51,7 @@ app.get('/', function (req, res) {
 
                 let availableMethods = [];
 
-                //Get the method name
+                // Get the method name
                 const methodName = currentMethod._content;
 
                 /*
@@ -60,7 +59,7 @@ app.get('/', function (req, res) {
                  ***/
                 getMethodInfo(connectionData, methodName).then( (methodInfo) => {
 
-                  //Arguments is a reserved word
+                  // Arguments is a reserved word
                   const statOfResuldOfMethodInfo = methodInfo.stat;
                   const methodArguments = methodInfo.method.arguments;
                   const { name, needslogin, needssigning, requiredperms } = methodInfo.method;
@@ -69,10 +68,10 @@ app.get('/', function (req, res) {
                    * Fourht step. Map every method to a app.get. This is the core of the application.
                    * Here we find the proxy for every method without auth o with read permissions of the Flickr API
                    ***/
-                  if (statOfResuldOfMethodInfo === 'ok' && requiredperms<2) {
+                  if (statOfResuldOfMethodInfo === 'ok' && requiredperms < 2) {
                     availableMethods.push({ name, needslogin, needssigning, requiredperms, arguments });
 
-                    let typeOfPermission = (requiredperms===0) ? '(no authentication needed)' : '(authentication needed with read permissions)';
+                    let typeOfPermission = requiredperms === 0 ? '(no authentication needed)' : '(authentication needed with read permissions)';
                     console.log('- Adding method ' + name + ' ' + typeOfPermission + '.');
                     app.get('/' + methodName, doCall(connectionData, methodName));
                   }
@@ -83,7 +82,7 @@ app.get('/', function (req, res) {
             }
           });
 
-          //Inform that everything is OK
+          // Inform that everything is OK
           res.end('Well... You\'re connected. You can work with the API :D');
 
         } else {
@@ -95,18 +94,18 @@ app.get('/', function (req, res) {
       res.end('Ooops! Something wrong has happened :/');
     }
   }
-})
+});
 
-//Callback. Once Flickr has send us the credentials, we redirect to the main page.
-app.get('/callback', function (req, res) {
+// Callback. Once Flickr has send us the credentials, we redirect to the main page.
+app.get('/callback', (req, res) => {
   const listOfSessions = req.sessionStore.sessions;
   const idFirstSession = Object.keys(listOfSessions)[0];
   currentSession = listOfSessions[idFirstSession];
   res.redirect('/');
-})
+});
 
-//Listen and inform
-app.listen(APPLICATION_PORT, function () {
+// Listen and inform
+app.listen(APPLICATION_PORT, () => {
   console.log('Express server listening on port ' + APPLICATION_PORT);
   console.log('First of all, you must validate the application opening: http://127.0.0.1:' + APPLICATION_PORT + '/');
-})
+});
