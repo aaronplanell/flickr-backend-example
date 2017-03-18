@@ -61,7 +61,7 @@ app.get('/', (req, res) => {
 
                   // Arguments is a reserved word
                   const statOfResuldOfMethodInfo = methodInfo.stat;
-                  const methodArguments = methodInfo.method.arguments;
+                  const methodArguments = methodInfo.arguments.argument;
                   const { name, needslogin, needssigning, requiredperms } = methodInfo.method;
 
                   /*
@@ -69,7 +69,7 @@ app.get('/', (req, res) => {
                    * Here we find the proxy for every method without auth o with read permissions of the Flickr API
                    ***/
                   if (statOfResuldOfMethodInfo === 'ok' && requiredperms < 2) {
-                    availableMethods.push({ name, needslogin, needssigning, requiredperms, arguments });
+                    availableMethods.push({ methodName, needslogin, needssigning, requiredperms, methodArguments });
 
                     let typeOfPermission = requiredperms === 0 ? '(no authentication needed)' : '(authentication needed with read permissions)';
                     console.log('- Adding method ' + name + ' ' + typeOfPermission + '.');
