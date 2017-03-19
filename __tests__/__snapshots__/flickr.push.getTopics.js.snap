@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.push.getTopics 1`] = `
+Object {
+  "stat": "ok",
+  "topics": Object {
+    "topic": Array [
+      Object {
+        "display_name": "photos from your contacts",
+        "name": "contacts_photos",
+      },
+      Object {
+        "display_name": "favorites from your contacts",
+        "name": "contacts_faves",
+      },
+      Object {
+        "display_name": "photos of your contacts",
+        "name": "photos_of_contacts",
+      },
+      Object {
+        "display_name": "photos of you",
+        "name": "photos_of_me",
+      },
+      Object {
+        "display_name": "your photos",
+        "name": "my_photos",
+      },
+      Object {
+        "display_name": "your favorites",
+        "name": "my_faves",
+      },
+      Object {
+        "display_name": "photos from an area (geo)",
+        "name": "geo",
+      },
+      Object {
+        "display_name": "photos from the Flickr Commons",
+        "name": "commons",
+      },
+      Object {
+        "display_name": "photos with a tag (or tags)",
+        "name": "tags",
+      },
+      Object {
+        "display_name": "photos from airports",
+        "name": "airports",
+      },
+      Object {
+        "display_name": "publicly viewable geo-tagged photos",
+        "name": "geotagged",
+      },
+    ],
+  },
+}
+`;

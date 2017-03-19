@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.galleries.getList 1`] = `
+Object {
+  "galleries": Object {
+    "gallery": Array [],
+    "page": 1,
+    "pages": 0,
+    "per_page": 100,
+    "total": "0",
+    "user_id": "148575064@N08",
+  },
+  "stat": "ok",
+}
+`;

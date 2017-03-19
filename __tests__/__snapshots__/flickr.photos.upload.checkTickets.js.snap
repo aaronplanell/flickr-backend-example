@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.photos.upload.checkTickets 1`] = `
+Object {
+  "stat": "ok",
+  "uploader": Object {
+    "ticket": Array [],
+  },
+}
+`;

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.photosets.getList 1`] = `
+Object {
+  "photosets": Object {
+    "cancreate": 1,
+    "page": 1,
+    "pages": 1,
+    "perpage": 1,
+    "photoset": Array [
+      Object {
+        "can_comment": 1,
+        "count_comments": "0",
+        "count_views": "0",
+        "date_create": "1488469723",
+        "date_update": "1489778360",
+        "description": Object {
+          "_content": "",
+        },
+        "farm": 4,
+        "id": "72157678661683622",
+        "needs_interstitial": 0,
+        "photos": 100,
+        "primary": "33051761522",
+        "secret": "5cd38313d7",
+        "server": "3770",
+        "title": Object {
+          "_content": "Pokémon",
+        },
+        "videos": "0",
+        "visibility_can_see_set": 1,
+      },
+    ],
+    "total": 1,
+  },
+  "stat": "ok",
+}
+`;

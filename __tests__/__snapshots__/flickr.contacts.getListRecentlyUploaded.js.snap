@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.contacts.getListRecentlyUploaded 1`] = `
+Object {
+  "contacts": Object {
+    "contact": Array [],
+    "total": 0,
+  },
+  "stat": "ok",
+}
+`;

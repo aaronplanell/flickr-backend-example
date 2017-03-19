@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.contacts.getList 1`] = `
+Object {
+  "contacts": Object {
+    "page": 1,
+    "pages": 0,
+    "per_page": 1000,
+    "perpage": 1000,
+    "total": 0,
+  },
+  "stat": "ok",
+}
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.people.findByUsername 1`] = `
+Object {
+  "stat": "ok",
+  "user": Object {
+    "id": "39873962@N08",
+    "nsid": "39873962@N08",
+    "username": Object {
+      "_content": "",
+    },
+  },
+}
+`;

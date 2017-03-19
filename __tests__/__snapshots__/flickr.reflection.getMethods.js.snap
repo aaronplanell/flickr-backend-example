@@ -1,0 +1,635 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.reflection.getMethods 1`] = `
+Object {
+  "methods": Object {
+    "method": Array [
+      Object {
+        "_content": "flickr.activity.userComments",
+      },
+      Object {
+        "_content": "flickr.activity.userPhotos",
+      },
+      Object {
+        "_content": "flickr.auth.checkToken",
+      },
+      Object {
+        "_content": "flickr.auth.getFrob",
+      },
+      Object {
+        "_content": "flickr.auth.getFullToken",
+      },
+      Object {
+        "_content": "flickr.auth.getToken",
+      },
+      Object {
+        "_content": "flickr.auth.oauth.checkToken",
+      },
+      Object {
+        "_content": "flickr.auth.oauth.getAccessToken",
+      },
+      Object {
+        "_content": "flickr.blogs.getList",
+      },
+      Object {
+        "_content": "flickr.blogs.getServices",
+      },
+      Object {
+        "_content": "flickr.blogs.postPhoto",
+      },
+      Object {
+        "_content": "flickr.cameras.getBrandModels",
+      },
+      Object {
+        "_content": "flickr.cameras.getBrands",
+      },
+      Object {
+        "_content": "flickr.collections.getInfo",
+      },
+      Object {
+        "_content": "flickr.collections.getTree",
+      },
+      Object {
+        "_content": "flickr.commons.getInstitutions",
+      },
+      Object {
+        "_content": "flickr.contacts.getList",
+      },
+      Object {
+        "_content": "flickr.contacts.getListRecentlyUploaded",
+      },
+      Object {
+        "_content": "flickr.contacts.getPublicList",
+      },
+      Object {
+        "_content": "flickr.contacts.getTaggingSuggestions",
+      },
+      Object {
+        "_content": "flickr.favorites.add",
+      },
+      Object {
+        "_content": "flickr.favorites.getContext",
+      },
+      Object {
+        "_content": "flickr.favorites.getList",
+      },
+      Object {
+        "_content": "flickr.favorites.getPublicList",
+      },
+      Object {
+        "_content": "flickr.favorites.remove",
+      },
+      Object {
+        "_content": "flickr.galleries.addPhoto",
+      },
+      Object {
+        "_content": "flickr.galleries.create",
+      },
+      Object {
+        "_content": "flickr.galleries.editMeta",
+      },
+      Object {
+        "_content": "flickr.galleries.editPhoto",
+      },
+      Object {
+        "_content": "flickr.galleries.editPhotos",
+      },
+      Object {
+        "_content": "flickr.galleries.getInfo",
+      },
+      Object {
+        "_content": "flickr.galleries.getList",
+      },
+      Object {
+        "_content": "flickr.galleries.getListForPhoto",
+      },
+      Object {
+        "_content": "flickr.galleries.getPhotos",
+      },
+      Object {
+        "_content": "flickr.groups.browse",
+      },
+      Object {
+        "_content": "flickr.groups.discuss.replies.add",
+      },
+      Object {
+        "_content": "flickr.groups.discuss.replies.delete",
+      },
+      Object {
+        "_content": "flickr.groups.discuss.replies.edit",
+      },
+      Object {
+        "_content": "flickr.groups.discuss.replies.getInfo",
+      },
+      Object {
+        "_content": "flickr.groups.discuss.replies.getList",
+      },
+      Object {
+        "_content": "flickr.groups.discuss.topics.add",
+      },
+      Object {
+        "_content": "flickr.groups.discuss.topics.getInfo",
+      },
+      Object {
+        "_content": "flickr.groups.discuss.topics.getList",
+      },
+      Object {
+        "_content": "flickr.groups.getInfo",
+      },
+      Object {
+        "_content": "flickr.groups.join",
+      },
+      Object {
+        "_content": "flickr.groups.joinRequest",
+      },
+      Object {
+        "_content": "flickr.groups.leave",
+      },
+      Object {
+        "_content": "flickr.groups.members.getList",
+      },
+      Object {
+        "_content": "flickr.groups.pools.add",
+      },
+      Object {
+        "_content": "flickr.groups.pools.getContext",
+      },
+      Object {
+        "_content": "flickr.groups.pools.getGroups",
+      },
+      Object {
+        "_content": "flickr.groups.pools.getPhotos",
+      },
+      Object {
+        "_content": "flickr.groups.pools.remove",
+      },
+      Object {
+        "_content": "flickr.groups.search",
+      },
+      Object {
+        "_content": "flickr.interestingness.getList",
+      },
+      Object {
+        "_content": "flickr.machinetags.getNamespaces",
+      },
+      Object {
+        "_content": "flickr.machinetags.getPairs",
+      },
+      Object {
+        "_content": "flickr.machinetags.getPredicates",
+      },
+      Object {
+        "_content": "flickr.machinetags.getRecentValues",
+      },
+      Object {
+        "_content": "flickr.machinetags.getValues",
+      },
+      Object {
+        "_content": "flickr.panda.getList",
+      },
+      Object {
+        "_content": "flickr.panda.getPhotos",
+      },
+      Object {
+        "_content": "flickr.people.findByEmail",
+      },
+      Object {
+        "_content": "flickr.people.findByUsername",
+      },
+      Object {
+        "_content": "flickr.people.getGroups",
+      },
+      Object {
+        "_content": "flickr.people.getInfo",
+      },
+      Object {
+        "_content": "flickr.people.getLimits",
+      },
+      Object {
+        "_content": "flickr.people.getPhotos",
+      },
+      Object {
+        "_content": "flickr.people.getPhotosOf",
+      },
+      Object {
+        "_content": "flickr.people.getPublicGroups",
+      },
+      Object {
+        "_content": "flickr.people.getPublicPhotos",
+      },
+      Object {
+        "_content": "flickr.people.getUploadStatus",
+      },
+      Object {
+        "_content": "flickr.photos.addTags",
+      },
+      Object {
+        "_content": "flickr.photos.comments.addComment",
+      },
+      Object {
+        "_content": "flickr.photos.comments.deleteComment",
+      },
+      Object {
+        "_content": "flickr.photos.comments.editComment",
+      },
+      Object {
+        "_content": "flickr.photos.comments.getList",
+      },
+      Object {
+        "_content": "flickr.photos.comments.getRecentForContacts",
+      },
+      Object {
+        "_content": "flickr.photos.delete",
+      },
+      Object {
+        "_content": "flickr.photos.geo.batchCorrectLocation",
+      },
+      Object {
+        "_content": "flickr.photos.geo.correctLocation",
+      },
+      Object {
+        "_content": "flickr.photos.geo.getLocation",
+      },
+      Object {
+        "_content": "flickr.photos.geo.getPerms",
+      },
+      Object {
+        "_content": "flickr.photos.geo.photosForLocation",
+      },
+      Object {
+        "_content": "flickr.photos.geo.removeLocation",
+      },
+      Object {
+        "_content": "flickr.photos.geo.setContext",
+      },
+      Object {
+        "_content": "flickr.photos.geo.setLocation",
+      },
+      Object {
+        "_content": "flickr.photos.geo.setPerms",
+      },
+      Object {
+        "_content": "flickr.photos.getAllContexts",
+      },
+      Object {
+        "_content": "flickr.photos.getContactsPhotos",
+      },
+      Object {
+        "_content": "flickr.photos.getContactsPublicPhotos",
+      },
+      Object {
+        "_content": "flickr.photos.getContext",
+      },
+      Object {
+        "_content": "flickr.photos.getCounts",
+      },
+      Object {
+        "_content": "flickr.photos.getExif",
+      },
+      Object {
+        "_content": "flickr.photos.getFavorites",
+      },
+      Object {
+        "_content": "flickr.photos.getInfo",
+      },
+      Object {
+        "_content": "flickr.photos.getNotInSet",
+      },
+      Object {
+        "_content": "flickr.photos.getPerms",
+      },
+      Object {
+        "_content": "flickr.photos.getPopular",
+      },
+      Object {
+        "_content": "flickr.photos.getRecent",
+      },
+      Object {
+        "_content": "flickr.photos.getSizes",
+      },
+      Object {
+        "_content": "flickr.photos.getUntagged",
+      },
+      Object {
+        "_content": "flickr.photos.getWithGeoData",
+      },
+      Object {
+        "_content": "flickr.photos.getWithoutGeoData",
+      },
+      Object {
+        "_content": "flickr.photos.licenses.getInfo",
+      },
+      Object {
+        "_content": "flickr.photos.licenses.setLicense",
+      },
+      Object {
+        "_content": "flickr.photos.notes.add",
+      },
+      Object {
+        "_content": "flickr.photos.notes.delete",
+      },
+      Object {
+        "_content": "flickr.photos.notes.edit",
+      },
+      Object {
+        "_content": "flickr.photos.people.add",
+      },
+      Object {
+        "_content": "flickr.photos.people.delete",
+      },
+      Object {
+        "_content": "flickr.photos.people.deleteCoords",
+      },
+      Object {
+        "_content": "flickr.photos.people.editCoords",
+      },
+      Object {
+        "_content": "flickr.photos.people.getList",
+      },
+      Object {
+        "_content": "flickr.photos.recentlyUpdated",
+      },
+      Object {
+        "_content": "flickr.photos.removeTag",
+      },
+      Object {
+        "_content": "flickr.photos.search",
+      },
+      Object {
+        "_content": "flickr.photos.setContentType",
+      },
+      Object {
+        "_content": "flickr.photos.setDates",
+      },
+      Object {
+        "_content": "flickr.photos.setMeta",
+      },
+      Object {
+        "_content": "flickr.photos.setPerms",
+      },
+      Object {
+        "_content": "flickr.photos.setSafetyLevel",
+      },
+      Object {
+        "_content": "flickr.photos.setTags",
+      },
+      Object {
+        "_content": "flickr.photos.suggestions.approveSuggestion",
+      },
+      Object {
+        "_content": "flickr.photos.suggestions.getList",
+      },
+      Object {
+        "_content": "flickr.photos.suggestions.rejectSuggestion",
+      },
+      Object {
+        "_content": "flickr.photos.suggestions.removeSuggestion",
+      },
+      Object {
+        "_content": "flickr.photos.suggestions.suggestLocation",
+      },
+      Object {
+        "_content": "flickr.photos.transform.rotate",
+      },
+      Object {
+        "_content": "flickr.photos.upload.checkTickets",
+      },
+      Object {
+        "_content": "flickr.photosets.addPhoto",
+      },
+      Object {
+        "_content": "flickr.photosets.comments.addComment",
+      },
+      Object {
+        "_content": "flickr.photosets.comments.deleteComment",
+      },
+      Object {
+        "_content": "flickr.photosets.comments.editComment",
+      },
+      Object {
+        "_content": "flickr.photosets.comments.getList",
+      },
+      Object {
+        "_content": "flickr.photosets.create",
+      },
+      Object {
+        "_content": "flickr.photosets.delete",
+      },
+      Object {
+        "_content": "flickr.photosets.editMeta",
+      },
+      Object {
+        "_content": "flickr.photosets.editPhotos",
+      },
+      Object {
+        "_content": "flickr.photosets.getContext",
+      },
+      Object {
+        "_content": "flickr.photosets.getInfo",
+      },
+      Object {
+        "_content": "flickr.photosets.getList",
+      },
+      Object {
+        "_content": "flickr.photosets.getPhotos",
+      },
+      Object {
+        "_content": "flickr.photosets.orderSets",
+      },
+      Object {
+        "_content": "flickr.photosets.removePhoto",
+      },
+      Object {
+        "_content": "flickr.photosets.removePhotos",
+      },
+      Object {
+        "_content": "flickr.photosets.reorderPhotos",
+      },
+      Object {
+        "_content": "flickr.photosets.setPrimaryPhoto",
+      },
+      Object {
+        "_content": "flickr.places.find",
+      },
+      Object {
+        "_content": "flickr.places.findByLatLon",
+      },
+      Object {
+        "_content": "flickr.places.getChildrenWithPhotosPublic",
+      },
+      Object {
+        "_content": "flickr.places.getInfo",
+      },
+      Object {
+        "_content": "flickr.places.getInfoByUrl",
+      },
+      Object {
+        "_content": "flickr.places.getPlaceTypes",
+      },
+      Object {
+        "_content": "flickr.places.getShapeHistory",
+      },
+      Object {
+        "_content": "flickr.places.getTopPlacesList",
+      },
+      Object {
+        "_content": "flickr.places.placesForBoundingBox",
+      },
+      Object {
+        "_content": "flickr.places.placesForContacts",
+      },
+      Object {
+        "_content": "flickr.places.placesForTags",
+      },
+      Object {
+        "_content": "flickr.places.placesForUser",
+      },
+      Object {
+        "_content": "flickr.places.resolvePlaceId",
+      },
+      Object {
+        "_content": "flickr.places.resolvePlaceURL",
+      },
+      Object {
+        "_content": "flickr.places.tagsForPlace",
+      },
+      Object {
+        "_content": "flickr.prefs.getContentType",
+      },
+      Object {
+        "_content": "flickr.prefs.getGeoPerms",
+      },
+      Object {
+        "_content": "flickr.prefs.getHidden",
+      },
+      Object {
+        "_content": "flickr.prefs.getPrivacy",
+      },
+      Object {
+        "_content": "flickr.prefs.getSafetyLevel",
+      },
+      Object {
+        "_content": "flickr.profile.getProfile",
+      },
+      Object {
+        "_content": "flickr.push.getSubscriptions",
+      },
+      Object {
+        "_content": "flickr.push.getTopics",
+      },
+      Object {
+        "_content": "flickr.push.subscribe",
+      },
+      Object {
+        "_content": "flickr.push.unsubscribe",
+      },
+      Object {
+        "_content": "flickr.reflection.getMethodInfo",
+      },
+      Object {
+        "_content": "flickr.reflection.getMethods",
+      },
+      Object {
+        "_content": "flickr.stats.getCollectionDomains",
+      },
+      Object {
+        "_content": "flickr.stats.getCollectionReferrers",
+      },
+      Object {
+        "_content": "flickr.stats.getCollectionStats",
+      },
+      Object {
+        "_content": "flickr.stats.getCSVFiles",
+      },
+      Object {
+        "_content": "flickr.stats.getPhotoDomains",
+      },
+      Object {
+        "_content": "flickr.stats.getPhotoReferrers",
+      },
+      Object {
+        "_content": "flickr.stats.getPhotosetDomains",
+      },
+      Object {
+        "_content": "flickr.stats.getPhotosetReferrers",
+      },
+      Object {
+        "_content": "flickr.stats.getPhotosetStats",
+      },
+      Object {
+        "_content": "flickr.stats.getPhotoStats",
+      },
+      Object {
+        "_content": "flickr.stats.getPhotostreamDomains",
+      },
+      Object {
+        "_content": "flickr.stats.getPhotostreamReferrers",
+      },
+      Object {
+        "_content": "flickr.stats.getPhotostreamStats",
+      },
+      Object {
+        "_content": "flickr.stats.getPopularPhotos",
+      },
+      Object {
+        "_content": "flickr.stats.getTotalViews",
+      },
+      Object {
+        "_content": "flickr.tags.getClusterPhotos",
+      },
+      Object {
+        "_content": "flickr.tags.getClusters",
+      },
+      Object {
+        "_content": "flickr.tags.getHotList",
+      },
+      Object {
+        "_content": "flickr.tags.getListPhoto",
+      },
+      Object {
+        "_content": "flickr.tags.getListUser",
+      },
+      Object {
+        "_content": "flickr.tags.getListUserPopular",
+      },
+      Object {
+        "_content": "flickr.tags.getListUserRaw",
+      },
+      Object {
+        "_content": "flickr.tags.getMostFrequentlyUsed",
+      },
+      Object {
+        "_content": "flickr.tags.getRelated",
+      },
+      Object {
+        "_content": "flickr.test.echo",
+      },
+      Object {
+        "_content": "flickr.test.login",
+      },
+      Object {
+        "_content": "flickr.test.null",
+      },
+      Object {
+        "_content": "flickr.urls.getGroup",
+      },
+      Object {
+        "_content": "flickr.urls.getUserPhotos",
+      },
+      Object {
+        "_content": "flickr.urls.getUserProfile",
+      },
+      Object {
+        "_content": "flickr.urls.lookupGallery",
+      },
+      Object {
+        "_content": "flickr.urls.lookupGroup",
+      },
+      Object {
+        "_content": "flickr.urls.lookupUser",
+      },
+    ],
+  },
+  "stat": "ok",
+}
+`;

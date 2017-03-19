@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.places.getPlaceTypes 1`] = `
+Object {
+  "place_types": Object {
+    "place_type": Array [
+      Object {
+        "_content": "neighbourhood",
+        "id": 22,
+      },
+      Object {
+        "_content": "locality",
+        "id": 7,
+      },
+      Object {
+        "_content": "county",
+        "id": 9,
+      },
+      Object {
+        "_content": "region",
+        "id": 8,
+      },
+      Object {
+        "_content": "country",
+        "id": 12,
+      },
+      Object {
+        "_content": "continent",
+        "id": 29,
+      },
+    ],
+  },
+  "stat": "ok",
+}
+`;

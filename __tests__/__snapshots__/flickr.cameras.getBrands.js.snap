@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.cameras.getBrands 1`] = `
+Object {
+  "brands": Object {
+    "brand": Array [
+      Object {
+        "id": "apple",
+        "name": "Apple",
+      },
+      Object {
+        "id": "samsung",
+        "name": "Samsung",
+      },
+      Object {
+        "id": "canon",
+        "name": "Canon",
+      },
+      Object {
+        "id": "nikon",
+        "name": "Nikon",
+      },
+      Object {
+        "id": "sony",
+        "name": "Sony",
+      },
+      Object {
+        "id": "motorola",
+        "name": "Motorola",
+      },
+      Object {
+        "id": "lg",
+        "name": "LG",
+      },
+      Object {
+        "id": "htc",
+        "name": "HTC",
+      },
+      Object {
+        "id": "fujifilm",
+        "name": "Fujifilm",
+      },
+      Object {
+        "id": "panasonic",
+        "name": "Panasonic",
+      },
+      Object {
+        "id": "olympus",
+        "name": "Olympus",
+      },
+      Object {
+        "id": "pentax",
+        "name": "Pentax",
+      },
+      Object {
+        "id": "nokia",
+        "name": "Nokia",
+      },
+      Object {
+        "id": "kodak",
+        "name": "Kodak",
+      },
+      Object {
+        "id": "leica",
+        "name": "Leica",
+      },
+      Object {
+        "id": "ricoh",
+        "name": "Ricoh",
+      },
+      Object {
+        "id": "gopro",
+        "name": "GoPro",
+      },
+      Object {
+        "id": "sonyericsson",
+        "name": "Sony Ericsson",
+      },
+      Object {
+        "id": "casio",
+        "name": "Casio",
+      },
+      Object {
+        "id": "blackberry",
+        "name": "BlackBerry",
+      },
+      Object {
+        "id": "minolta",
+        "name": "Konica Minolta",
+      },
+      Object {
+        "id": "hp",
+        "name": "HP",
+      },
+      Object {
+        "id": "phaseone",
+        "name": "Phase One",
+      },
+      Object {
+        "id": "sigma",
+        "name": "Sigma",
+      },
+      Object {
+        "id": "sanyo",
+        "name": "Sanyo",
+      },
+      Object {
+        "id": "palm",
+        "name": "Palm",
+      },
+      Object {
+        "id": "benq",
+        "name": "BenQ",
+      },
+      Object {
+        "id": "polaroid",
+        "name": "Polaroid",
+      },
+      Object {
+        "id": "sharp",
+        "name": "Sharp",
+      },
+      Object {
+        "id": "nintendo",
+        "name": "Nintendo",
+      },
+      Object {
+        "id": "leaf",
+        "name": "Leaf",
+      },
+      Object {
+        "id": "acer",
+        "name": "Acer",
+      },
+      Object {
+        "id": "toshiba",
+        "name": "Toshiba",
+      },
+      Object {
+        "id": "kyocera",
+        "name": "Kyocera",
+      },
+      Object {
+        "id": "vivitar",
+        "name": "Vivitar",
+      },
+      Object {
+        "id": "kddi",
+        "name": "KDDI",
+      },
+      Object {
+        "id": "docomo",
+        "name": "DoCoMo",
+      },
+      Object {
+        "id": "helio",
+        "name": "Helio",
+      },
+      Object {
+        "id": "jvc",
+        "name": "JVC",
+      },
+      Object {
+        "id": "epson",
+        "name": "Epson",
+      },
+      Object {
+        "id": "concord",
+        "name": "Concord",
+      },
+      Object {
+        "id": "google",
+        "name": "Google",
+      },
+    ],
+  },
+  "stat": "ok",
+}
+`;

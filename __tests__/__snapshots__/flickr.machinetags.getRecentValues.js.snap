@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.machinetags.getRecentValues 1`] = `
+Object {
+  "stat": "ok",
+  "values": Object {
+    "namespace": "",
+    "page": 1,
+    "pages": 0,
+    "perpage": 500,
+    "predicate": "",
+    "total": 0,
+    "value": null,
+  },
+}
+`;

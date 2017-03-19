@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.groups.browse 1`] = `
+Object {
+  "category": Object {
+    "name": "/",
+    "path": "/",
+    "pathids": "",
+  },
+  "stat": "ok",
+}
+`;

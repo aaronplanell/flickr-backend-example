@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.prefs.getContentType 1`] = `
+Object {
+  "person": Object {
+    "content_type": 1,
+    "nsid": "148575064@N08",
+  },
+  "stat": "ok",
+}
+`;

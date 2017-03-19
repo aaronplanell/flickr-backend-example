@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.collections.getTree 1`] = `
+Object {
+  "collections": Object {
+    "collection": Array [
+      Object {
+        "description": "Pokémon",
+        "iconlarge": "https://farm1.staticflickr.com/647/cols/72157678798377192_2e8efbc46c_l.jpg",
+        "iconsmall": "https://farm1.staticflickr.com/647/cols/72157678798377192_2e8efbc46c_s.jpg",
+        "id": "148482251-72157678798377192",
+        "set": Array [
+          Object {
+            "description": "",
+            "id": "72157678661683622",
+            "title": "Pokémon",
+          },
+        ],
+        "title": "Pokémon",
+      },
+    ],
+  },
+  "stat": "ok",
+}
+`;

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.blogs.getList 1`] = `
+Object {
+  "blogs": Array [],
+  "stat": "ok",
+}
+`;

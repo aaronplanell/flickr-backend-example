@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.panda.getList 1`] = `
+Object {
+  "pandas": Object {
+    "panda": Array [
+      Object {
+        "_content": "ling ling",
+      },
+      Object {
+        "_content": "hsing hsing",
+      },
+      Object {
+        "_content": "wang wang",
+      },
+    ],
+  },
+  "stat": "ok",
+}
+`;

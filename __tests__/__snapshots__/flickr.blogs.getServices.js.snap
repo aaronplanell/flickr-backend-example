@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.blogs.getServices 1`] = `
+Object {
+  "services": Object {
+    "service": Array [
+      Object {
+        "_content": "Blogger",
+        "id": "beta.blogger.com",
+      },
+      Object {
+        "_content": "LiveJournal",
+        "id": "LiveJournal",
+      },
+      Object {
+        "_content": "Wordpress",
+        "id": "MetaWeblogAPI",
+      },
+      Object {
+        "_content": "BloggerAPI",
+        "id": "BloggerAPI",
+      },
+      Object {
+        "_content": "Twitter",
+        "id": "Twitter",
+      },
+    ],
+  },
+  "stat": "ok",
+}
+`;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.contacts.getTaggingSuggestions 1`] = `
+Object {
+  "contacts": Object {
+    "contact": Array [
+      Object {
+        "family": "0",
+        "friend": "0",
+        "iconfarm": 0,
+        "iconserver": "",
+        "ispro": 0,
+        "nsid": "148575064@N08",
+        "path_alias": "",
+        "realname": "Aaron Planell López",
+        "username": "Aaron Planell López",
+      },
+    ],
+    "page": 1,
+    "pages": 1,
+    "perpage": 1,
+    "total": 1,
+  },
+  "stat": "ok",
+}
+`;

@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.tags.getHotList 1`] = `
+Object {
+  "hottags": Object {
+    "count": 20,
+    "period": "day",
+    "tag": Array [
+      Object {
+        "_content": "feb23",
+        "score": "100",
+      },
+      Object {
+        "_content": "whitenight",
+        "score": "97",
+      },
+      Object {
+        "_content": "whitenightmelbourne",
+        "score": "95",
+      },
+      Object {
+        "_content": "farligt",
+        "score": "94",
+      },
+      Object {
+        "_content": "avstand",
+        "score": "93",
+      },
+      Object {
+        "_content": "facedowntuesday",
+        "score": "92",
+      },
+      Object {
+        "_content": "encuentros",
+        "score": "90",
+      },
+      Object {
+        "_content": "whenigrowup",
+        "score": "90",
+      },
+      Object {
+        "_content": "dp3merrill",
+        "score": "90",
+      },
+      Object {
+        "_content": "whitenightmelb",
+        "score": "90",
+      },
+      Object {
+        "_content": "fdt",
+        "score": "84",
+      },
+      Object {
+        "_content": "northplatterealestate",
+        "score": "83",
+      },
+      Object {
+        "_content": "fencefriday",
+        "score": "82",
+      },
+      Object {
+        "_content": "benchmonday",
+        "score": "82",
+      },
+      Object {
+        "_content": "genomskinlig",
+        "score": "82",
+      },
+      Object {
+        "_content": "myvalentine",
+        "score": "81",
+      },
+      Object {
+        "_content": "tva",
+        "score": "79",
+      },
+      Object {
+        "_content": "dp3",
+        "score": "78",
+      },
+      Object {
+        "_content": "happyvalentines",
+        "score": "76",
+      },
+      Object {
+        "_content": "leicammonochrom",
+        "score": "75",
+      },
+    ],
+  },
+  "stat": "ok",
+}
+`;

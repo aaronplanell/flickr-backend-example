@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.prefs.getSafetyLevel 1`] = `
+Object {
+  "person": Object {
+    "nsid": "148575064@N08",
+    "safety_level": 1,
+  },
+  "stat": "ok",
+}
+`;

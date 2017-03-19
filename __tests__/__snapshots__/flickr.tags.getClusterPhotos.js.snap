@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.tags.getClusterPhotos 1`] = `
+Object {
+  "photos": Object {
+    "photo": Array [],
+  },
+  "stat": "ok",
+}
+`;

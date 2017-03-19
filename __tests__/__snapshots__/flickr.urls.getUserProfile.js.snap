@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.urls.getUserProfile 1`] = `
+Object {
+  "stat": "ok",
+  "user": Object {
+    "nsid": "148575064@N08",
+    "url": "https://www.flickr.com/people/148575064@N08/",
+  },
+}
+`;

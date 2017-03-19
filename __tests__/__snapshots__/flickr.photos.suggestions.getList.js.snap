@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.photos.suggestions.getList 1`] = `
+Object {
+  "stat": "ok",
+  "suggestions": Object {
+    "page": 1,
+    "per_page": 250,
+    "suggestion": Array [],
+    "total": "0",
+  },
+}
+`;
