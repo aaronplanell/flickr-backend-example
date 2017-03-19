@@ -8,6 +8,5 @@ it(methodName, () => {
   return callMethod(methodName)
     .then(result => {
       expect(result.stat).toEqual('ok');
-      expect(result).toMatchSnapshot();
     });
 });
