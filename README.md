@@ -89,155 +89,153 @@ This proxy implements those methods that:
 Methods with write privileges are not allowed.
 
 This is the full list:
-| Method                                      | Type                                        | # Arguments |
-|---------------------------------------------|---------------------------------------------|-------------|
-| flickr.activity.userPhotos                  | Authentication needed with read permissions | 4           |
-| flickr.auth.oauth.checkToken                | No authentication needed                    | 2           |
-| flickr.auth.checkToken                      | No authentication needed                    | 2           |
-| flickr.auth.getFullToken                    | No authentication needed                    | 2           |
-| flickr.cameras.getBrandModels               | No authentication needed                    | 2           |
-| flickr.activity.userComments                | Authentication needed with read permissions | 3           |
-| flickr.blogs.getServices                    | No authentication needed                    | 1           |
-| flickr.auth.getToken                        | No authentication needed                    | 2           |
-| flickr.blogs.getList                        | Authentication needed with read permissions | 2           |
-| flickr.collections.getInfo                  | Authentication needed with read permissions | 2           |
-| flickr.cameras.getBrands                    | No authentication needed                    | 1           |
-| flickr.collections.getTree                  | No authentication needed                    | 3           |
-| flickr.auth.oauth.getAccessToken            | No authentication needed                    | 1           |
-| flickr.commons.getInstitutions              | No authentication needed                    | 1           |
-| flickr.contacts.getList                     | Authentication needed with read permissions | 5           |
-| flickr.contacts.getListRecentlyUploaded     | Authentication needed with read permissions | 3           |
-| flickr.auth.getFrob                         | No authentication needed                    | 1           |
-| flickr.contacts.getPublicList               | No authentication needed                    | 4           |
-| flickr.contacts.getTaggingSuggestions       | Authentication needed with read permissions | 3           |
-| flickr.favorites.getList                    | No authentication needed                    | 7           |
-| flickr.favorites.getContext                 | No authentication needed                    | 3           |
-| flickr.favorites.getPublicList              | No authentication needed                    | 7           |
-| flickr.galleries.getInfo                    | No authentication needed                    | 2           |
-| flickr.galleries.getPhotos                  | No authentication needed                    | 5           |
-| flickr.galleries.getListForPhoto            | No authentication needed                    | 4           |
-| flickr.groups.browse                        | Authentication needed with read permissions | 2           |
-| flickr.groups.discuss.replies.getInfo       | No authentication needed                    | 4           |
-| flickr.galleries.getList                    | No authentication needed                    | 5           |
-| flickr.groups.discuss.replies.getList       | No authentication needed                    | 5           |
-| flickr.groups.discuss.topics.getInfo        | No authentication needed                    | 3           |
-| flickr.groups.discuss.topics.getList        | No authentication needed                    | 4           |
-| flickr.groups.getInfo                       | No authentication needed                    | 4           |
-| flickr.groups.pools.getContext              | No authentication needed                    | 3           |
-| flickr.groups.members.getList               | Authentication needed with read permissions | 5           |
-| flickr.groups.pools.getPhotos               | No authentication needed                    | 7           |
-| flickr.groups.search                        | No authentication needed                    | 4           |
-| flickr.interestingness.getList              | No authentication needed                    | 5           |
-| flickr.groups.pools.getGroups               | Authentication needed with read permissions | 3           |
-| flickr.machinetags.getPredicates            | No authentication needed                    | 4           |
-| flickr.machinetags.getNamespaces            | No authentication needed                    | 4           |
-| flickr.machinetags.getRecentValues          | No authentication needed                    | 4           |
-| flickr.machinetags.getPairs                 | No authentication needed                    | 5           |
-| flickr.machinetags.getValues                | No authentication needed                    | 5           |
-| flickr.panda.getList                        | No authentication needed                    | 1           |
-| flickr.panda.getPhotos                      | No authentication needed                    | 5           |
-| flickr.people.findByEmail                   | No authentication needed                    | 2           |
-| flickr.people.getLimits                     | Authentication needed with read permissions | 1           |
-| flickr.people.findByUsername                | No authentication needed                    | 2           |
-| flickr.people.getInfo                       | No authentication needed                    | 2           |
-| flickr.people.getGroups                     | Authentication needed with read permissions | 3           |
-| flickr.people.getPhotos                     | No authentication needed                    | 12          |
-| flickr.people.getPhotosOf                   | No authentication needed                    | 6           |
-| flickr.people.getPublicGroups               | No authentication needed                    | 3           |
-| flickr.people.getPublicPhotos               | No authentication needed                    | 6           |
-| flickr.photos.comments.getList              | No authentication needed                    | 4           |
-| flickr.photos.comments.getRecentForContacts | Authentication needed with read permissions | 6           |
-| flickr.people.getUploadStatus               | Authentication needed with read permissions | 1           |
-| flickr.photos.geo.getLocation               | No authentication needed                    | 3           |
-| flickr.photos.geo.getPerms                  | Authentication needed with read permissions | 2           |
-| flickr.photos.geo.photosForLocation         | Authentication needed with read permissions | 7           |
-| flickr.photos.getAllContexts                | No authentication needed                    | 2           |
-| flickr.photos.getContactsPhotos             | Authentication needed with read permissions | 6           |
-| flickr.photos.getContext                    | No authentication needed                    | 2           |
-| flickr.photos.getExif                       | No authentication needed                    | 3           |
-| flickr.photos.getCounts                     | Authentication needed with read permissions | 3           |
-| flickr.photos.getInfo                       | No authentication needed                    | 3           |
-| flickr.photos.getNotInSet                   | Authentication needed with read permissions | 10          |
-| flickr.photos.getPerms                      | Authentication needed with read permissions | 2           |
-| flickr.photos.getFavorites                  | No authentication needed                    | 4           |
-| flickr.photos.getRecent                     | No authentication needed                    | 4           |
-| flickr.photos.getPopular                    | No authentication needed                    | 6           |
-| flickr.photos.getWithGeoData                | Authentication needed with read permissions | 11          |
-| flickr.photos.getContactsPublicPhotos       | No authentication needed                    | 7           |
-| flickr.photos.getUntagged                   | Authentication needed with read permissions | 10          |
-| flickr.photos.getWithoutGeoData             | Authentication needed with read permissions | 11          |
-| flickr.photos.getSizes                      | No authentication needed                    | 2           |
-| flickr.photos.licenses.getInfo              | No authentication needed                    | 1           |
-| flickr.photos.people.getList                | No authentication needed                    | 2           |
-| flickr.photos.recentlyUpdated               | Authentication needed with read permissions | 5           |
-| flickr.photos.suggestions.getList           | Authentication needed with read permissions | 3           |
-| flickr.photos.search                        | No authentication needed                    | 35          |
-| flickr.photos.upload.checkTickets           | No authentication needed                    | 2           |
-| flickr.photosets.comments.getList           | No authentication needed                    | 2           |
-| flickr.photosets.getContext                 | No authentication needed                    | 3           |
-| flickr.photosets.getList                    | No authentication needed                    | 5           |
-| flickr.photosets.getPhotos                  | No authentication needed                    | 8           |
-| flickr.photosets.getInfo                    | No authentication needed                    | 3           |
-| flickr.places.find                          | No authentication needed                    | 2           |
-| flickr.places.findByLatLon                  | No authentication needed                    | 4           |
-| flickr.places.getChildrenWithPhotosPublic   | No authentication needed                    | 3           |
-| flickr.places.getInfo                       | No authentication needed                    | 3           |
-| flickr.places.getInfoByUrl                  | No authentication needed                    | 2           |
-| flickr.places.getShapeHistory               | No authentication needed                    | 3           |
-| flickr.places.getTopPlacesList              | No authentication needed                    | 5           |
-| flickr.places.placesForBoundingBox          | No authentication needed                    | 4           |
-| flickr.places.getPlaceTypes                 | No authentication needed                    | 1           |
-| flickr.places.placesForTags                 | No authentication needed                    | 13          |
-| flickr.places.placesForUser                 | Authentication needed with read permissions | 10          |
-| flickr.places.resolvePlaceId                | No authentication needed                    | 2           |
-| flickr.prefs.getContentType                 | Authentication needed with read permissions | 1           |
-| flickr.places.tagsForPlace                  | No authentication needed                    | 7           |
-| flickr.places.resolvePlaceURL               | No authentication needed                    | 2           |
-| flickr.prefs.getGeoPerms                    | Authentication needed with read permissions | 1           |
-| flickr.prefs.getHidden                      | Authentication needed with read permissions | 1           |
-| flickr.places.placesForContacts             | Authentication needed with read permissions | 11          |
-| flickr.prefs.getPrivacy                     | Authentication needed with read permissions | 1           |
-| flickr.profile.getProfile                   | No authentication needed                    | 2           |
-| flickr.prefs.getSafetyLevel                 | Authentication needed with read permissions | 1           |
-| flickr.push.getSubscriptions                | Authentication needed with read permissions | 1           |
-| flickr.push.subscribe                       | Authentication needed with read permissions | 15          |
-| flickr.push.getTopics                       | No authentication needed                    | 1           |
-| flickr.stats.getCollectionReferrers         | Authentication needed with read permissions | 6           |
-| flickr.stats.getCollectionDomains           | Authentication needed with read permissions | 5           |
-| flickr.stats.getCollectionStats             | Authentication needed with read permissions | 3           |
-| flickr.stats.getCSVFiles                    | Authentication needed with read permissions | 1           |
-| flickr.stats.getPhotoReferrers              | Authentication needed with read permissions | 6           |
-| flickr.stats.getPhotoDomains                | Authentication needed with read permissions | 5           |
-| flickr.push.unsubscribe                     | Authentication needed with read permissions | 5           |
-| flickr.stats.getPhotosetReferrers           | Authentication needed with read permissions | 6           |
-| flickr.reflection.getMethods                | No authentication needed                    | 1           |
-| flickr.stats.getPhotosetDomains             | Authentication needed with read permissions | 5           |
-| flickr.stats.getPhotosetStats               | Authentication needed with read permissions | 3           |
-| flickr.stats.getPhotoStats                  | Authentication needed with read permissions | 3           |
-| flickr.stats.getPhotostreamDomains          | Authentication needed with read permissions | 4           |
-| flickr.reflection.getMethodInfo             | No authentication needed                    | 2           |
-| flickr.stats.getPhotostreamReferrers        | Authentication needed with read permissions | 5           |
-| flickr.stats.getPopularPhotos               | Authentication needed with read permissions | 5           |
-| flickr.tags.getClusterPhotos                | No authentication needed                    | 3           |
-| flickr.tags.getClusters                     | No authentication needed                    | 2           |
-| flickr.stats.getTotalViews                  | Authentication needed with read permissions | 2           |
-| flickr.tags.getListPhoto                    | No authentication needed                    | 2           |
-| flickr.tags.getHotList                      | No authentication needed                    | 3           |
-| flickr.stats.getPhotostreamStats            | Authentication needed with read permissions | 2           |
-| flickr.tags.getListUser                     | No authentication needed                    | 2           |
-| flickr.tags.getListUserPopular              | No authentication needed                    | 3           |
-| flickr.tags.getMostFrequentlyUsed           | Authentication needed with read permissions | 1           |
-| flickr.test.echo                            | No authentication needed                    | 1           |
-| flickr.tags.getRelated                      | No authentication needed                    | 2           |
-| flickr.test.null                            | Authentication needed with read permissions | 1           |
-| flickr.tags.getListUserRaw                  | No authentication needed                    | 2           |
-| flickr.test.login                           | Authentication needed with read permissions | 1           |
-| flickr.urls.lookupGallery                   | No authentication needed                    | 2           |
-| flickr.urls.getUserPhotos                   | No authentication needed                    | 2           |
-| flickr.urls.getGroup                        | No authentication needed                    | 2           |
-| flickr.urls.getUserProfile                  | No authentication needed                    | 2           |
-| flickr.urls.lookupGroup                     | No authentication needed                    | 2           |
-| flickr.urls.lookupUser                      | No authentication needed                    | 2           |
+- [flickr.activity.userPhotos](https://www.flickr.com/services/api/flickr.activity.userPhotos.html).
+- [flickr.auth.oauth.checkToken](https://www.flickr.com/services/api/flickr.auth.oauth.checkToken.html).
+- [flickr.auth.checkToken](https://www.flickr.com/services/api/flickr.auth.checkToken.html).
+- [flickr.auth.getFullToken](https://www.flickr.com/services/api/flickr.auth.getFullToken.html).
+- [flickr.cameras.getBrandModels](https://www.flickr.com/services/api/flickr.cameras.getBrandModels.html).
+- [flickr.activity.userComments](https://www.flickr.com/services/api/flickr.activity.userComments.html).
+- [flickr.blogs.getServices](https://www.flickr.com/services/api/flickr.blogs.getServices.html).
+- [flickr.auth.getToken](https://www.flickr.com/services/api/flickr.auth.getToken.html).
+- [flickr.blogs.getList](https://www.flickr.com/services/api/flickr.blogs.getList.html).
+- [flickr.collections.getInfo](https://www.flickr.com/services/api/flickr.collections.getInfo.html).
+- [flickr.cameras.getBrands](https://www.flickr.com/services/api/flickr.cameras.getBrands.html).
+- [flickr.collections.getTree](https://www.flickr.com/services/api/flickr.collections.getTree.html).
+- [flickr.auth.oauth.getAccessToken](https://www.flickr.com/services/api/flickr.auth.oauth.getAccessToken.html).
+- [flickr.commons.getInstitutions](https://www.flickr.com/services/api/flickr.commons.getInstitutions.html).
+- [flickr.contacts.getList](https://www.flickr.com/services/api/flickr.contacts.getList.html).
+- [flickr.contacts.getListRecentlyUploaded](https://www.flickr.com/services/api/flickr.contacts.getListRecentlyUploaded.html).
+- [flickr.auth.getFrob](https://www.flickr.com/services/api/flickr.auth.getFrob.html).
+- [flickr.contacts.getPublicList](https://www.flickr.com/services/api/flickr.contacts.getPublicList.html).
+- [flickr.contacts.getTaggingSuggestions](https://www.flickr.com/services/api/flickr.contacts.getTaggingSuggestions.html).
+- [flickr.favorites.getList](https://www.flickr.com/services/api/flickr.favorites.getList.html).
+- [flickr.favorites.getContext](https://www.flickr.com/services/api/flickr.favorites.getContext.html).
+- [flickr.favorites.getPublicList](https://www.flickr.com/services/api/flickr.favorites.getPublicList.html).
+- [flickr.galleries.getInfo](https://www.flickr.com/services/api/flickr.galleries.getInfo.html).
+- [flickr.galleries.getPhotos](https://www.flickr.com/services/api/flickr.galleries.getPhotos.html).
+- [flickr.galleries.getListForPhoto](https://www.flickr.com/services/api/flickr.galleries.getListForPhoto.html).
+- [flickr.groups.browse](https://www.flickr.com/services/api/flickr.groups.browse.html).
+- [flickr.groups.discuss.replies.getInfo](https://www.flickr.com/services/api/flickr.groups.discuss.replies.getInfo.html).
+- [flickr.galleries.getList](https://www.flickr.com/services/api/flickr.galleries.getList.html).
+- [flickr.groups.discuss.replies.getList](https://www.flickr.com/services/api/flickr.groups.discuss.replies.getList.html).
+- [flickr.groups.discuss.topics.getInfo](https://www.flickr.com/services/api/flickr.groups.discuss.topics.getInfo.html).
+- [flickr.groups.discuss.topics.getList](https://www.flickr.com/services/api/flickr.groups.discuss.topics.getList.html).
+- [flickr.groups.getInfo](https://www.flickr.com/services/api/flickr.groups.getInfo.html).
+- [flickr.groups.pools.getContext](https://www.flickr.com/services/api/flickr.groups.pools.getContext.html).
+- [flickr.groups.members.getList](https://www.flickr.com/services/api/flickr.groups.members.getList.html).
+- [flickr.groups.pools.getPhotos](https://www.flickr.com/services/api/flickr.groups.pools.getPhotos.html).
+- [flickr.groups.search](https://www.flickr.com/services/api/flickr.groups.search.html).
+- [flickr.interestingness.getList](https://www.flickr.com/services/api/flickr.interestingness.getList.html).
+- [flickr.groups.pools.getGroups](https://www.flickr.com/services/api/flickr.groups.pools.getGroups.html).
+- [flickr.machinetags.getPredicates](https://www.flickr.com/services/api/flickr.machinetags.getPredicates.html).
+- [flickr.machinetags.getNamespaces](https://www.flickr.com/services/api/flickr.machinetags.getNamespaces.html).
+- [flickr.machinetags.getRecentValues](https://www.flickr.com/services/api/flickr.machinetags.getRecentValues.html).
+- [flickr.machinetags.getPairs](https://www.flickr.com/services/api/flickr.machinetags.getPairs.html).
+- [flickr.machinetags.getValues](https://www.flickr.com/services/api/flickr.machinetags.getValues.html).
+- [flickr.panda.getList](https://www.flickr.com/services/api/flickr.panda.getList.html).
+- [flickr.panda.getPhotos](https://www.flickr.com/services/api/flickr.panda.getPhotos.html).
+- [flickr.people.findByEmail](https://www.flickr.com/services/api/flickr.people.findByEmail.html).
+- [flickr.people.getLimits](https://www.flickr.com/services/api/flickr.people.getLimits.html).
+- [flickr.people.findByUsername](https://www.flickr.com/services/api/flickr.people.findByUsername.html).
+- [flickr.people.getInfo](https://www.flickr.com/services/api/flickr.people.getInfo.html).
+- [flickr.people.getGroups](https://www.flickr.com/services/api/flickr.people.getGroups.html).
+- [flickr.people.getPhotos](https://www.flickr.com/services/api/flickr.people.getPhotos.html).
+- [flickr.people.getPhotosOf](https://www.flickr.com/services/api/flickr.people.getPhotosOf.html).
+- [flickr.people.getPublicGroups](https://www.flickr.com/services/api/flickr.people.getPublicGroups.html).
+- [flickr.people.getPublicPhotos](https://www.flickr.com/services/api/flickr.people.getPublicPhotos.html).
+- [flickr.photos.comments.getList](https://www.flickr.com/services/api/flickr.photos.comments.getList.html).
+- [flickr.photos.comments.getRecentForContacts](https://www.flickr.com/services/api/flickr.photos.comments.getRecentForContacts.html).
+- [flickr.people.getUploadStatus](https://www.flickr.com/services/api/flickr.people.getUploadStatus.html).
+- [flickr.photos.geo.getLocation](https://www.flickr.com/services/api/flickr.photos.geo.getLocation.html).
+- [flickr.photos.geo.getPerms](https://www.flickr.com/services/api/flickr.photos.geo.getPerms.html).
+- [flickr.photos.geo.photosForLocation](https://www.flickr.com/services/api/flickr.photos.geo.photosForLocation.html).
+- [flickr.photos.getAllContexts](https://www.flickr.com/services/api/flickr.photos.getAllContexts.html).
+- [flickr.photos.getContactsPhotos](https://www.flickr.com/services/api/flickr.photos.getContactsPhotos.html).
+- [flickr.photos.getContext](https://www.flickr.com/services/api/flickr.photos.getContext.html).
+- [flickr.photos.getExif](https://www.flickr.com/services/api/flickr.photos.getExif.html).
+- [flickr.photos.getCounts](https://www.flickr.com/services/api/flickr.photos.getCounts.html).
+- [flickr.photos.getInfo](https://www.flickr.com/services/api/flickr.photos.getInfo.html).
+- [flickr.photos.getNotInSet](https://www.flickr.com/services/api/flickr.photos.getNotInSet.html).
+- [flickr.photos.getPerms](https://www.flickr.com/services/api/flickr.photos.getPerms.html).
+- [flickr.photos.getFavorites](https://www.flickr.com/services/api/flickr.photos.getFavorites.html).
+- [flickr.photos.getRecent](https://www.flickr.com/services/api/flickr.photos.getRecent.html).
+- [flickr.photos.getPopular](https://www.flickr.com/services/api/flickr.photos.getPopular.html).
+- [flickr.photos.getWithGeoData](https://www.flickr.com/services/api/flickr.photos.getWithGeoData.html).
+- [flickr.photos.getContactsPublicPhotos](https://www.flickr.com/services/api/flickr.photos.getContactsPublicPhotos.html).
+- [flickr.photos.getUntagged](https://www.flickr.com/services/api/flickr.photos.getUntagged.html).
+- [flickr.photos.getWithoutGeoData](https://www.flickr.com/services/api/flickr.photos.getWithoutGeoData.html).
+- [flickr.photos.getSizes](https://www.flickr.com/services/api/flickr.photos.getSizes.html).
+- [flickr.photos.licenses.getInfo](https://www.flickr.com/services/api/flickr.photos.licenses.getInfo.html).
+- [flickr.photos.people.getList](https://www.flickr.com/services/api/flickr.photos.people.getList.html).
+- [flickr.photos.recentlyUpdated](https://www.flickr.com/services/api/flickr.photos.recentlyUpdated.html).
+- [flickr.photos.suggestions.getList](https://www.flickr.com/services/api/flickr.photos.suggestions.getList.html).
+- [flickr.photos.search](https://www.flickr.com/services/api/flickr.photos.search.html).
+- [flickr.photos.upload.checkTickets](https://www.flickr.com/services/api/flickr.photos.upload.checkTickets.html).
+- [flickr.photosets.comments.getList](https://www.flickr.com/services/api/flickr.photosets.comments.getList.html).
+- [flickr.photosets.getContext](https://www.flickr.com/services/api/flickr.photosets.getContext.html).
+- [flickr.photosets.getList](https://www.flickr.com/services/api/flickr.photosets.getList.html).
+- [flickr.photosets.getPhotos](https://www.flickr.com/services/api/flickr.photosets.getPhotos.html).
+- [flickr.photosets.getInfo](https://www.flickr.com/services/api/flickr.photosets.getInfo.html).
+- [flickr.places.find](https://www.flickr.com/services/api/flickr.places.find.html).
+- [flickr.places.findByLatLon](https://www.flickr.com/services/api/flickr.places.findByLatLon.html).
+- [flickr.places.getChildrenWithPhotosPublic](https://www.flickr.com/services/api/flickr.places.getChildrenWithPhotosPublic.html).
+- [flickr.places.getInfo](https://www.flickr.com/services/api/flickr.places.getInfo.html).
+- [flickr.places.getInfoByUrl](https://www.flickr.com/services/api/flickr.places.getInfoByUrl.html).
+- [flickr.places.getShapeHistory](https://www.flickr.com/services/api/flickr.places.getShapeHistory.html).
+- [flickr.places.getTopPlacesList](https://www.flickr.com/services/api/flickr.places.getTopPlacesList.html).
+- [flickr.places.placesForBoundingBox](https://www.flickr.com/services/api/flickr.places.placesForBoundingBox.html).
+- [flickr.places.getPlaceTypes](https://www.flickr.com/services/api/flickr.places.getPlaceTypes.html).
+- [flickr.places.placesForTags](https://www.flickr.com/services/api/flickr.places.placesForTags.html).
+- [flickr.places.placesForUser](https://www.flickr.com/services/api/flickr.places.placesForUser.html).
+- [flickr.places.resolvePlaceId](https://www.flickr.com/services/api/flickr.places.resolvePlaceId.html).
+- [flickr.prefs.getContentType](https://www.flickr.com/services/api/flickr.prefs.getContentType.html).
+- [flickr.places.tagsForPlace](https://www.flickr.com/services/api/flickr.places.tagsForPlace.html).
+- [flickr.places.resolvePlaceURL](https://www.flickr.com/services/api/flickr.places.resolvePlaceURL.html).
+- [flickr.prefs.getGeoPerms](https://www.flickr.com/services/api/flickr.prefs.getGeoPerms.html).
+- [flickr.prefs.getHidden](https://www.flickr.com/services/api/flickr.prefs.getHidden.html).
+- [flickr.places.placesForContacts](https://www.flickr.com/services/api/flickr.places.placesForContacts.html).
+- [flickr.prefs.getPrivacy](https://www.flickr.com/services/api/flickr.prefs.getPrivacy.html).
+- [flickr.profile.getProfile](https://www.flickr.com/services/api/flickr.profile.getProfile.html).
+- [flickr.prefs.getSafetyLevel](https://www.flickr.com/services/api/flickr.prefs.getSafetyLevel.html).
+- [flickr.push.getSubscriptions](https://www.flickr.com/services/api/flickr.push.getSubscriptions.html).
+- [flickr.push.subscribe](https://www.flickr.com/services/api/flickr.push.subscribe.html).
+- [flickr.push.getTopics](https://www.flickr.com/services/api/flickr.push.getTopics.html).
+- [flickr.stats.getCollectionReferrers](https://www.flickr.com/services/api/flickr.stats.getCollectionReferrers.html).
+- [flickr.stats.getCollectionDomains](https://www.flickr.com/services/api/flickr.stats.getCollectionDomains.html).
+- [flickr.stats.getCollectionStats](https://www.flickr.com/services/api/flickr.stats.getCollectionStats.html).
+- [flickr.stats.getCSVFiles](https://www.flickr.com/services/api/flickr.stats.getCSVFiles.html).
+- [flickr.stats.getPhotoReferrers](https://www.flickr.com/services/api/flickr.stats.getPhotoReferrers.html).
+- [flickr.stats.getPhotoDomains](https://www.flickr.com/services/api/flickr.stats.getPhotoDomains.html).
+- [flickr.push.unsubscribe](https://www.flickr.com/services/api/flickr.push.unsubscribe.html).
+- [flickr.stats.getPhotosetReferrers](https://www.flickr.com/services/api/flickr.stats.getPhotosetReferrers.html).
+- [flickr.reflection.getMethods](https://www.flickr.com/services/api/flickr.reflection.getMethods.html).
+- [flickr.stats.getPhotosetDomains](https://www.flickr.com/services/api/flickr.stats.getPhotosetDomains.html).
+- [flickr.stats.getPhotosetStats](https://www.flickr.com/services/api/flickr.stats.getPhotosetStats.html).
+- [flickr.stats.getPhotoStats](https://www.flickr.com/services/api/flickr.stats.getPhotoStats.html).
+- [flickr.stats.getPhotostreamDomains](https://www.flickr.com/services/api/flickr.stats.getPhotostreamDomains.html).
+- [flickr.reflection.getMethodInfo](https://www.flickr.com/services/api/flickr.reflection.getMethodInfo.html).
+- [flickr.stats.getPhotostreamReferrers](https://www.flickr.com/services/api/flickr.stats.getPhotostreamReferrers.html).
+- [flickr.stats.getPopularPhotos](https://www.flickr.com/services/api/flickr.stats.getPopularPhotos.html).
+- [flickr.tags.getClusterPhotos](https://www.flickr.com/services/api/flickr.tags.getClusterPhotos.html).
+- [flickr.tags.getClusters](https://www.flickr.com/services/api/flickr.tags.getClusters.html).
+- [flickr.stats.getTotalViews](https://www.flickr.com/services/api/flickr.stats.getTotalViews.html).
+- [flickr.tags.getListPhoto](https://www.flickr.com/services/api/flickr.tags.getListPhoto.html).
+- [flickr.tags.getHotList](https://www.flickr.com/services/api/flickr.tags.getHotList.html).
+- [flickr.stats.getPhotostreamStats](https://www.flickr.com/services/api/flickr.stats.getPhotostreamStats.html).
+- [flickr.tags.getListUser](https://www.flickr.com/services/api/flickr.tags.getListUser.html).
+- [flickr.tags.getListUserPopular](https://www.flickr.com/services/api/flickr.tags.getListUserPopular.html).
+- [flickr.tags.getMostFrequentlyUsed](https://www.flickr.com/services/api/flickr.tags.getMostFrequentlyUsed.html).
+- [flickr.test.echo](https://www.flickr.com/services/api/flickr.test.echo.html).
+- [flickr.tags.getRelated](https://www.flickr.com/services/api/flickr.tags.getRelated.html).
+- [flickr.test.null](https://www.flickr.com/services/api/flickr.test.null.html).
+- [flickr.tags.getListUserRaw](https://www.flickr.com/services/api/flickr.tags.getListUserRaw.html).
+- [flickr.test.login](https://www.flickr.com/services/api/flickr.test.login.html).
+- [flickr.urls.lookupGallery](https://www.flickr.com/services/api/flickr.urls.lookupGallery.html).
+- [flickr.urls.getUserPhotos](https://www.flickr.com/services/api/flickr.urls.getUserPhotos.html).
+- [flickr.urls.getGroup](https://www.flickr.com/services/api/flickr.urls.getGroup.html).
+- [flickr.urls.getUserProfile](https://www.flickr.com/services/api/flickr.urls.getUserProfile.html).
+- [flickr.urls.lookupGroup](https://www.flickr.com/services/api/flickr.urls.lookupGroup.html).
+- [flickr.urls.lookupUser](https://www.flickr.com/services/api/flickr.urls.lookupUser.html).
 
 
 ## How to test the project?
