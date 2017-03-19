@@ -4,7 +4,8 @@
   "description": "An API in NodeJS/Express for serving Flick images",
   "main": "src/index.js",
   "scripts": {
-    "start": "babel-node src/index.js --presets es2015,stage-2"
+    "start": "babel-node src/index.js --presets es2015,stage-2",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,10 @@
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
+    "babel-jest": "^19.0.0",
     "babel-preset-es2015": "^6.22.0",
-    "babel-preset-stage-2": "^6.22.0"
+    "babel-preset-stage-2": "^6.22.0",
+    "jest": "^19.0.2",
+    "regenerator-runtime": "^0.10.3"
   }
 }

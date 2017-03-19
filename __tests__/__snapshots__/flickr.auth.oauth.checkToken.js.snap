@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flickr.auth.oauth.checkToken 1`] = `
+Object {
+  "oauth": Object {
+    "perms": Object {
+      "_content": "read",
+    },
+    "token": Object {
+      "_content": "72157679332129251-4c25dc1c269191d0",
+    },
+    "user": Object {
+      "fullname": "Aaron Planell López",
+      "nsid": "148575064@N08",
+      "username": "Aaron Planell López",
+    },
+  },
+  "stat": "ok",
+}
+`;
