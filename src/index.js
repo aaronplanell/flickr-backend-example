@@ -16,6 +16,15 @@ let app = express();
 app.use(session({'secret': FLICKR_CONSUMER_SECRET}));
 app.use(new Grant(config));
 
+// Add headers for CORS
+app.use( (req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
+  res.setHeader('Access-Control-Allow-Methods', 'GET');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
+
 // Our session variable
 let currentSession;
 
